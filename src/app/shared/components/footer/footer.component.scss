@@ -1,0 +1,26 @@
+@use "variables" as var;
+@use "mixins" as mix;
+
+.wave {
+    height: 9.375rem;
+    overflow: hidden;
+}
+
+.wave__svg {
+    height: 100%;
+    width: 100%;
+}
+
+.wave__path {
+    stroke: none;
+    fill: map-get($map: var.$colors-map, $key: "white");
+}
+
+.footer__container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 4rem 0;
+    @include mix.flex-box(column, nowrap, center, center);
+    gap: 1rem;
+}
