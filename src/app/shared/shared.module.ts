@@ -14,6 +14,11 @@ import { SocialLinksComponent } from './components/social-links/social-links.com
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    MenuComponent,
+    FooterComponent,
+    SocialLinksComponent
   ]
 })
 export class SharedModule { }

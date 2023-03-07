@@ -1,1 +1,32 @@
-<p>menu works!</p>
+<div [classList]="menu" id="nav">
+    <div class="menu__banner">
+        <img [classList]="banner" src="/assets/img/1672311169146.jpeg" alt="Imagen de menú" loading="lazy">
+    </div>
+
+    <div class="menu__links">
+        <nav class="nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="#start" data-text="Inicio">Inicio</a>
+                </li>
+                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="#about" data-text="Sobre mi">Sobre
+                        mi</a></li>
+                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="#proyects"
+                        data-text="Proyectos">Proyectos</a></li>
+                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="#contact"
+                        data-text="Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!--Social-links component-->
+        <div class="links__social">
+            <app-social-links [svgClass]="svgClass"></app-social-links>
+        </div>
+
+    </div>
+</div>
+
+<button class="menuicon" (click)="menuToggle()" (mouseenter)="colorToogle()" (mouseleave)="colorToogle()">
+    <div [classList]="barOne"></div>
+    <div [classList]="barTwo"></div>
+    <div [classList]="barThree"></div>
+</button>
