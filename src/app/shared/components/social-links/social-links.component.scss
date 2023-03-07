@@ -1,0 +1,22 @@
+@use "variables/colors" as var;
+@use "mixins" as mix;
+
+.rrss__ul {
+    width: 100%;
+    @include mix.flex-box(row, wrap, space-around, center);
+    gap: 2rem;
+}
+
+.rrss__svg {
+    width: 3rem;
+    color: map-get($map: var.$colors-map, $key: "black");
+    transition: all .3s;
+
+    &:hover {
+        color: map-get(var.$colors-map, "highlighted");
+    }
+}
+
+.rrss__svg--blue {
+    color: map-get($map: var.$colors-map, $key: "secondary");
+}

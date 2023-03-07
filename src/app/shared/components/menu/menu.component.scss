@@ -1,0 +1,173 @@
+@use "variables" as var;
+@use "mixins" as mix;
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include mix.flex-box(row, nowrap, space-between, center);
+    background: map-get(var.$colors-map, "black");
+    transition: 0.5s;
+}
+
+.menu--active {
+    top: -100%;
+}
+
+.menu__banner {
+    position: relative;
+    width: 37.5rem;
+    height: 100%;
+
+    @media(max-width:991px) {
+        display: none;
+    }
+}
+
+.menu__banner-img {
+    height: 100%;
+    filter: grayscale(50%);
+    transition: all .5s;
+}
+
+.menu__banner-img--gray {
+    filter: grayscale(100%);
+}
+
+.menu__links {
+    margin: 0 auto;
+    @include mix.flex-box(column, nowrap, center, center);
+    align-self: center;
+    gap: 5rem;
+}
+
+.links__social {
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    @include mix.flex-box(row, nowrap, center, center);
+}
+
+.nav__ul {
+    position: relative;
+}
+
+.nav__li {
+    position: relative;
+    list-style: none;
+    padding: 0 1.25rem;
+    margin: .3125rem 0;
+    overflow: hidden;
+    display: table;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: map-get(var.$colors-map, "secondary");
+        transition: transform 0.5s ease-in-out;
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+
+    &:hover::before {
+        transition: transform 0.5s ease-in-out;
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+}
+
+.nav__a {
+    position: relative;
+    color: map-get(var.$colors-map, "white");
+    text-decoration: none;
+    font-family: map-get(var.$fonts-map, "secondary");
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1.5em;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+
+    @media(max-width:991px) {
+        font-size: 3rem;
+    }
+
+    &::before {
+        content: attr(data-text);
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        color: map-get(var.$colors-map, "white");
+    }
+
+    &:hover {
+        transform: translateY(-100%);
+        color: map-get(var.$colors-map, "white");
+    }
+}
+
+.menuicon {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    width: 4rem;
+    height: 4rem;
+    gap: 1.1rem;
+
+    ul {
+        border: 2px solid map-get(var.$colors-map, "secondary");
+        border-radius: 50%;
+        padding: 1rem;
+    }
+
+    &:hover {
+        .menuicon__bar--one,
+        .menuicon__bar--two,
+        .menuicon__bar--three {
+            background-color: map-get(var.$colors-map, "highlighted");
+        }
+    }
+}
+
+.menuicon__bar {
+    background-color: map-get(var.$colors-map, "primary");
+    height: .25rem;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+
+.menuicon__bar--one,
+        .menuicon__bar--two,
+        .menuicon__bar--three {
+            background-color: map-get(var.$colors-map, "secondary");
+        }
+
+.menuicon__bar--one {
+    transform: rotate(45deg);
+}
+
+.menuicon__bar--two {
+    opacity: 0;
+}
+
+.menuicon__bar--three {
+    transform: rotate(-45deg);
+}
