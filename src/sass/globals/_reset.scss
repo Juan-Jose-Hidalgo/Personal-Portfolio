@@ -86,20 +86,45 @@ em {
 }
 
 //* Especific: format headers
-h1,
-h2 {
-    font-family: map-get(var.$fonts-map, "secondary");
-    font-weight: 700;
-    text-align: center;
-    font-size: 3em;
-    padding: 2rem 0;
+h1 {
+    font-size: 2.2em;
+    font-family: map-get($map: var.$fonts-map, $key: "secondary");
+    font-weight: bold;
+    color: map-get($map: var.$colors-map, $key: "accent");
+    text-shadow: 2px 2px 2px map-get($map: var.$colors-map, $key: "secondary");
 
-    &::first-letter {
-        color: map-get(var.$colors-map, "secondary");
+    @media (min-width: 576px) {
+        font-size: 2.8em;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 3.5em;
+    }
+
+    @media (min-width: 992px) {
+        color: map-get($map: var.$colors-map, $key: "primary");
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 4em;
+    }
+
+}
+
+h2 {
+    font-size: 1.8em;
+    font-family: map-get($map: var.$fonts-map, $key: "secondary");
+
+    @media (min-width: 576px) {
+        font-size: 2em;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 3em;
     }
 }
 
-p{
+p {
     font-size: 1.2em;
 }
 
@@ -156,7 +181,10 @@ body {
     min-height: 100vh;
     font-size: 100%;
     font-family: map-get(var.$fonts-map, "primary");
-    color: map-get(var.$colors-map, "primary");
+    color: map-get(var.$colors-map, "text");
+    background-color: map-get($map: var.$colors-map, $key: "white");
+    background-image: url('/assets/img/iconos.png');
+    background-size: 70%;
     /* (Optional) */
     hyphens: auto;
     /* (Optional) */

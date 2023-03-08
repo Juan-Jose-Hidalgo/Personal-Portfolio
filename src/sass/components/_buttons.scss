@@ -1,0 +1,34 @@
+@use "variables" as var;
+
+//* 3D BUTTON
+.btn-3d {
+    position: relative;
+    display: inline-block;
+    font-family: map-get($map: var.$fonts-map, $key: "primary");
+    font-size: 1.375em;
+    text-transform: uppercase;
+    padding: 1.25rem 3.75rem;
+    color: map-get($map: var.$colors-map, $key: "white");
+    margin: 1.25rem .625rem .625rem;
+    border-radius: .375rem;
+    text-align: center;
+    transition: top .01s linear;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    background-color: map-get($map: var.$colors-map, $key: "primary");
+    box-shadow: 0 0 0 1px #6698cb inset,
+        0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+        0 8px 0 0 rgba(110, 164, 219, .7),
+        0 8px 0 1px rgba(0, 0, 0, .4),
+        0 8px 8px 1px rgba(0, 0, 0, 0.5);
+
+    &:hover {
+        background-color: map-get($map: var.$colors-map, $key: "primary");
+    }
+
+    &:active {
+        top: 9px;
+        box-shadow: 0 0 0 1px #6191C2 inset,
+            0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+            0 0 0 1px rgba(0, 0, 0, 0.4);
+    }
+}
