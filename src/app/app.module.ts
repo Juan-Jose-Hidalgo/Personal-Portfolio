@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxPageScrollCoreModule,
     SharedModule
   ],
   providers: [],

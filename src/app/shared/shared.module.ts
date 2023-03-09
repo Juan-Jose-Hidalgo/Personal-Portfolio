@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,11 +16,13 @@ import { SocialLinksComponent } from './components/social-links/social-links.com
     SocialLinksComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
-  exports:[
+  exports: [
     MenuComponent,
     FooterComponent,
+    NgxPageScrollCoreModule,
     SocialLinksComponent
   ]
 })

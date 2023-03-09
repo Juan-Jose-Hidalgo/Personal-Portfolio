@@ -1,4 +1,4 @@
-<div [classList]="menu" id="nav">
+<div [classList]="menu">
     <div class="menu__banner">
         <img [classList]="banner" src="/assets/img/1672311169146.jpeg" alt="Imagen de menú" loading="lazy">
     </div>
@@ -6,11 +6,12 @@
     <div class="menu__links">
         <nav class="nav">
             <ul class="nav__ul">
-                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="#start" data-text="Inicio">Inicio</a>
+                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="/inicio#home" data-text="Inicio">Inicio</a>
                 </li>
-                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="#about" data-text="Sobre mi">Sobre
+                <li class="nav__li"><a class="nav__a" href="/inicio#about" (click)="menuToggle()"
+                        data-text="Sobre mi">Sobre
                         mi</a></li>
-                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="#proyects"
+                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="#projects"
                         data-text="Proyectos">Proyectos</a></li>
                 <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="#contact"
                         data-text="Contacto">Contacto</a></li>

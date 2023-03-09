@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 import { LandingPageRoutingModule } from './landing-page-routing.module';
 import { HeroComponent } from './components/hero/hero.component';
@@ -23,7 +24,8 @@ import { SvgAnimatedComponent } from './components/svg-animated/svg-animated.com
   ],
   imports: [
     CommonModule,
-    LandingPageRoutingModule
+    LandingPageRoutingModule,
+    NgxPageScrollCoreModule
   ]
 })
 export class LandingPageModule { }
