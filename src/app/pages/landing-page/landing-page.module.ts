@@ -10,6 +10,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TechnologiesComponent } from './components/technologies/technologies.component';
 import { SvgAnimatedComponent } from './components/svg-animated/svg-animated.component';
+import { ProjectComponent } from './components/project/project.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SvgAnimatedComponent } from './components/svg-animated/svg-animated.com
     LandingComponent,
     ProjectsComponent,
     TechnologiesComponent,
-    SvgAnimatedComponent
+    SvgAnimatedComponent,
+    ProjectComponent
   ],
   imports: [
     CommonModule,

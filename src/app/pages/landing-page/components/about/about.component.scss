@@ -1,10 +1,6 @@
 @use "mixins" as mix;
 @use "variables" as var;
 
-.about {
-    display: block;
-}
-
 .about__container {
     @include mix.flex-box(column, nowrap, center, center);
     width: 90%;
