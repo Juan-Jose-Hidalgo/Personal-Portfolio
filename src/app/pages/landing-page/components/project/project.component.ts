@@ -7,5 +7,7 @@ import { Project } from 'src/app/models/project.interface';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent {
+
   @Input() project!: Project;
+
 }

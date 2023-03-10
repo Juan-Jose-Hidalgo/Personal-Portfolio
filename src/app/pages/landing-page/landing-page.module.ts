@@ -11,6 +11,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { TechnologiesComponent } from './components/technologies/technologies.component';
 import { SvgAnimatedComponent } from './components/svg-animated/svg-animated.component';
 import { ProjectComponent } from './components/project/project.component';
+import { FontawesomeModule } from 'src/app/shared/fontawesome/fontawesome.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ProjectComponent } from './components/project/project.component';
   ],
   imports: [
     CommonModule,
+    FontawesomeModule,
     LandingPageRoutingModule,
     NgxPageScrollCoreModule
   ]

@@ -8,6 +8,12 @@
 </div>
 
 <div class="card__footer">
-    <a [href]="project.url" class="btn btn--primary radial-out" target="_blank">Probar</a>
-    <a [href]="project.repository" class="btn btn--accent" target="_blank">GitHub Repo</a>
+    <a [href]="project.url" class="btn btn--primary radial-out" target="_blank">
+        <fa-icon [icon]="['fas', 'up-right-from-square']"></fa-icon>
+        <span>Probar</span>
+    </a>
+    <a [href]="project.repository" class="btn btn--accent" target="_blank">
+        <fa-icon [icon]="['fab', 'github']"></fa-icon>
+        <span>GitHub Repo</span>
+    </a>
 </div>
