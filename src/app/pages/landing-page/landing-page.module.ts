@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 
 import { LandingPageRoutingModule } from './landing-page-routing.module';
@@ -29,7 +30,8 @@ import { FontawesomeModule } from 'src/app/shared/fontawesome/fontawesome.module
     CommonModule,
     FontawesomeModule,
     LandingPageRoutingModule,
-    NgxPageScrollCoreModule
+    NgxPageScrollCoreModule,
+    ReactiveFormsModule
   ]
 })
 export class LandingPageModule { }

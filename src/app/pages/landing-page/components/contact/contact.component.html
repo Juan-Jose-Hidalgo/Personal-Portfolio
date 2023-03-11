@@ -1,1 +1,45 @@
-<p>contact works!</p>
+<div class="contact">
+    <h2 class="contact__h2">Contacto</h2>
+
+    <div class="contact__container">
+
+        <form class="form" method="post" [formGroup]="contactForm">
+
+            <h3 class="form__title">Envíame un correo</h3>
+
+            <div class="form__group">
+                <input type="text" class="form__input" id="name" name="name" placeholder="nombre"
+                    formControlName="name">
+                <label for="name" class="form__label">Nombre:</label>
+            </div>
+
+            <div class="form__group">
+                <input type="email" class="form__input" id="email-input" name="email" placeholder="email"
+                    formControlName="email">
+                <label for="email-input" class="form__label">Correo electrónico:</label>
+            </div>
+
+            <div class="form__group">
+                <input type="text" class="form__input" id="subject" name="subject" placeholder="asunto"
+                    formControlName="subject">
+                <label for="subject" class="form__label">Asunto:</label>
+            </div>
+
+            <div class="form__group">
+                <textarea class="form__input" id="message" name="message" placeholder="mensaje"
+                    formControlName="message"></textarea>
+                <label for="message" class="form__label">Mensaje:</label>
+            </div>
+
+            <button class="btn btn--primary" type="submit" (click)="send()">
+                <fa-icon [icon]="['fas', 'envelope']"></fa-icon>
+                <span>Enviar</span>
+            </button>
+        </form>
+
+        <div class="contact__image">
+            <img src="/assets/img/1672311169146.jpeg" alt="">
+        </div>
+
+    </div>
+</div>

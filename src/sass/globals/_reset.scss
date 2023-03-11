@@ -126,6 +126,11 @@ h2 {
 
 }
 
+h3 {
+    font-size: 1.5em;
+    font-family: map-get($map: var.$fonts-map, $key: "secondary");
+}
+
 p {
     font-size: 1.2em;
 }
@@ -157,7 +162,6 @@ label {
     hyphens: auto;
     background-color: transparent;
     color: inherit;
-    display: block;
     /* (Optional) */
     appearance: none;
     outline: none;
