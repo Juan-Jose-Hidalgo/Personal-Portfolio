@@ -90,8 +90,8 @@ h1 {
     font-size: 2.2em;
     font-family: map-get($map: var.$fonts-map, $key: "secondary");
     font-weight: bold;
-    color: map-get($map: var.$colors-map, $key: "accent");
-    text-shadow: 2px 2px 2px map-get($map: var.$colors-map, $key: "secondary");
+    color: map-get($map: var.$colors-map, $key: "primary");
+    text-shadow: 1px 1px 1px map-get($map: var.$colors-map, $key: "white");
 
     @media (min-width: 576px) {
         font-size: 2.8em;
@@ -99,10 +99,6 @@ h1 {
 
     @media (min-width: 768px) {
         font-size: 3.5em;
-    }
-
-    @media (min-width: 992px) {
-        color: map-get($map: var.$colors-map, $key: "primary");
     }
 
     @media (min-width: 1200px) {
