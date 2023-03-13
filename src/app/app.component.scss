@@ -1,6 +1,6 @@
+@use "variables" as var;
+
 .footer {
     // height: 35rem;
-    background-image: linear-gradient(to right top, rgba(209, 107, 165, .3), rgba(199, 119, 185, .3), rgba(185, 130, 201, .3), rgba(170, 143, 216, .3), rgba(154, 154, 225, .3), rgba(138, 167, 236, 0.377), rgba(121, 178, 244, 0.651), rgba(105, 191, 248, 0.774), rgba(82, 208, 254, 0.767), rgba(65, 223, 255, 0.842), rgba(70, 238, 250, 0.849), #5ffbf1), url(/assets/img/acuarela.jpg);
-    background-size: cover;
-    background-position: bottom left;
+    background-color: map-get($map: var.$colors-map, $key: "black");
 }

@@ -1,0 +1,19 @@
+<div class="card__header">
+    <img class="card__img" [src]="project.coverImage" alt="Imagen del Proyecto">
+</div>
+
+<div class="card__body">
+    <h3 class="card__title">{{project.title}}</h3>
+    <p class="card__p">{{project.shortDescription}}</p>
+</div>
+
+<div class="card__footer">
+    <a [href]="project.url" class="btn btn--primary radial-out" target="_blank">
+        <fa-icon [icon]="['fas', 'up-right-from-square']"></fa-icon>
+        <span>Probar</span>
+    </a>
+    <a [href]="project.repository" class="btn btn--accent" target="_blank">
+        <fa-icon [icon]="['fab', 'github']"></fa-icon>
+        <span>GitHub Repo</span>
+    </a>
+</div>

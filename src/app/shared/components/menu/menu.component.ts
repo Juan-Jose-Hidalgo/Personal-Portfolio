@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -16,6 +17,11 @@ export class MenuComponent {
   barThree = 'menuicon__bar';
   banner = 'menu__banner-img';
   svgClass = 'rrss__svg rrss__svg--blue';
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   /**
    * Method that shows or hides the main menu.

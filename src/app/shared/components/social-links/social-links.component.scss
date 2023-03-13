@@ -2,8 +2,8 @@
 @use "mixins" as mix;
 
 .rrss__ul {
-    width: 100%;
     @include mix.flex-box(row, wrap, space-around, center);
+    width: 100%;
     gap: 2rem;
 }
 
@@ -13,10 +13,10 @@
     transition: all .3s;
 
     &:hover {
-        color: map-get(var.$colors-map, "highlighted");
+        color: map-get(var.$colors-map, "accent");
     }
 }
 
 .rrss__svg--blue {
-    color: map-get($map: var.$colors-map, $key: "secondary");
+    color: map-get($map: var.$colors-map, $key: "primary");
 }

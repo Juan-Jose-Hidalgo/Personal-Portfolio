@@ -1,0 +1,48 @@
+@use "variables" as var;
+@use "mixins" as mix;
+
+.hero {
+    @include mix.flex-box(column, nowrap, center, center);
+    background: url('/assets/img/blob.svg') no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-color: map-get($map: var.$colors-map, $key: "black");
+    width: 100%;
+    height: 100vh;
+}
+
+.hero__content {
+    @include mix.flex-box(row, wrap, space-around, center);
+    width: 100%;
+    gap: 2rem;
+}
+
+.hero__svg {
+    width: 70%;
+
+    @media (min-width: 576px) {
+        width: 50%;
+    }
+
+    @media (min-width: 768px) {
+        width: 40%;
+    }
+
+    @media (min-width: 922px) {
+        width: 40%;
+    }
+}
+
+.hero__info {
+    @include mix.flex-box(column, wrap, center, center);
+    gap: 1.5rem;
+
+    @media (min-width: 922px) {
+        width: 40%;
+        gap: 5rem;
+    }
+}
+
+.hero__h2 {
+    color: map-get($map: var.$colors-map, $key: "white");
+}

@@ -2,14 +2,15 @@
 @use "mixins" as mix;
 
 .menu {
+    @include mix.flex-box(row, nowrap, space-between, center);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    @include mix.flex-box(row, nowrap, space-between, center);
     background: map-get(var.$colors-map, "black");
     transition: 0.5s;
+    z-index: 1;
 }
 
 .menu--active {
@@ -48,10 +49,10 @@
 }
 
 .nav {
+    @include mix.flex-box(row, nowrap, center, center);
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    @include mix.flex-box(row, nowrap, center, center);
 }
 
 .nav__ul {
@@ -73,7 +74,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: map-get(var.$colors-map, "secondary");
+        background: map-get(var.$colors-map, "primary");
         transition: transform 0.5s ease-in-out;
         transform: scaleY(0);
         transform-origin: bottom;
@@ -107,7 +108,7 @@
         position: absolute;
         bottom: -100%;
         left: 0;
-        color: map-get(var.$colors-map, "white");
+        color: map-get(var.$colors-map, "text");
     }
 
     &:hover {
@@ -129,24 +130,20 @@
     width: 4rem;
     height: 4rem;
     gap: 1.1rem;
-
-    ul {
-        border: 2px solid map-get(var.$colors-map, "secondary");
-        border-radius: 50%;
-        padding: 1rem;
-    }
+    z-index: 2;
 
     &:hover {
+
         .menuicon__bar--one,
         .menuicon__bar--two,
         .menuicon__bar--three {
-            background-color: map-get(var.$colors-map, "highlighted");
+            background-color: map-get(var.$colors-map, "primary");
         }
     }
 }
 
 .menuicon__bar {
-    background-color: map-get(var.$colors-map, "primary");
+    background-color: map-get(var.$colors-map, "black");
     height: .25rem;
     width: 100%;
     border-radius: 5px;
@@ -155,10 +152,10 @@
 }
 
 .menuicon__bar--one,
-        .menuicon__bar--two,
-        .menuicon__bar--three {
-            background-color: map-get(var.$colors-map, "secondary");
-        }
+.menuicon__bar--two,
+.menuicon__bar--three {
+    background-color: map-get(var.$colors-map, "accent");
+}
 
 .menuicon__bar--one {
     transform: rotate(45deg);
