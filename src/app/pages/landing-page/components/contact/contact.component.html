@@ -8,27 +8,31 @@
             <h3 class="form__title">Envíame un correo</h3>
 
             <div class="form__group">
-                <input type="text" class="form__input" id="name" name="name" placeholder="nombre"
-                    formControlName="name">
+                <input type="text" class="form__input" id="name" name="nombre" placeholder="nombre"
+                    formControlName="nombre">
                 <label for="name" class="form__label">Nombre:</label>
+                <div [classList]="fieldInvalid('nombre') ? errorClass : 'form__error'">{{getErrorMsg('nombre')}}</div>
             </div>
 
             <div class="form__group">
                 <input type="email" class="form__input" id="email-input" name="email" placeholder="email"
                     formControlName="email">
                 <label for="email-input" class="form__label">Correo electrónico:</label>
+                <div [classList]="fieldInvalid('email') ? errorClass : 'form__error'">{{getErrorMsg('email')}}</div>
             </div>
 
             <div class="form__group">
-                <input type="text" class="form__input" id="subject" name="subject" placeholder="asunto"
-                    formControlName="subject">
+                <input type="text" class="form__input" id="subject" name="asunto" placeholder="asunto"
+                    formControlName="asunto">
                 <label for="subject" class="form__label">Asunto:</label>
+                <div [classList]="fieldInvalid('asunto') ? errorClass : 'form__error'">{{getErrorMsg('asunto')}}</div>
             </div>
 
             <div class="form__group">
-                <textarea class="form__input" id="message" name="message" placeholder="mensaje"
-                    formControlName="message"></textarea>
+                <textarea class="form__input" id="message" name="mensaje" placeholder="mensaje"
+                    formControlName="mensaje"></textarea>
                 <label for="message" class="form__label">Mensaje:</label>
+                <div [classList]="fieldInvalid('mensaje') ? errorClass : 'form__error'">{{getErrorMsg('mensaje')}}</div>
             </div>
 
             <button class="btn btn--primary" type="submit" (click)="send()">
@@ -43,3 +47,4 @@
 
     </div>
 </div>
+

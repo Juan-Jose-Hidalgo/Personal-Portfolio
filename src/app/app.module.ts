@@ -8,6 +8,8 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgxPageScrollCoreModule,
     SharedModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

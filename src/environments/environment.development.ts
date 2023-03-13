@@ -1,4 +1,8 @@
-export const environment = {
+import { Environment } from "src/app/models/environment.interface";
+
+export const environment:Environment = {
+  production: false,
+  URL: 'http://localhost:3500/contact/',
   firebase: {
     projectId: 'portfolio-projects-a8711',
     appId: '1:412421836064:web:5fb6ac8a08dc10b3e3db45',

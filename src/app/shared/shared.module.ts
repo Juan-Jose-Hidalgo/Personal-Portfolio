@@ -6,6 +6,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
 import { RouterModule } from '@angular/router';
+import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 
 
 
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     MenuComponent,
     FooterComponent,
-    SocialLinksComponent
+    SocialLinksComponent,
+    SnackBarComponent,
   ],
   imports: [
     CommonModule,

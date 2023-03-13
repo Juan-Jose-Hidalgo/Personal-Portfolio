@@ -3,11 +3,8 @@ import { Injectable } from '@angular/core';
 import {
   CollectionReference,
   DocumentData,
-  addDoc,
   collection,
-  deleteDoc,
   doc,
-  updateDoc,
 } from '@firebase/firestore';
 
 import { Firestore, collectionData, docData } from '@angular/fire/firestore';

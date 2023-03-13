@@ -204,3 +204,21 @@ body {
 .highlighted {
     color: map-get($map: var.$colors-map, $key: "secondary");
 }
+
+.mat-mdc-snack-bar-container {
+    &.snackbar--success {
+        --mdc-snackbar-container-color: #57a0e4;
+        --mat-mdc-snack-bar-button-color: #fff;
+        --mdc-snackbar-supporting-text-color: #fff;
+        text-align: center;
+    }
+}
+
+.mat-mdc-snack-bar-container {
+    &.snackbar--warning {
+        --mdc-snackbar-container-color: #f44336;
+        --mat-mdc-snack-bar-button-color: #fff;
+        --mdc-snackbar-supporting-text-color: #fff;
+        text-align: center;
+    }
+}

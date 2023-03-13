@@ -13,6 +13,8 @@ import { TechnologiesComponent } from './components/technologies/technologies.co
 import { SvgAnimatedComponent } from './components/svg-animated/svg-animated.component';
 import { ProjectComponent } from './components/project/project.component';
 import { FontawesomeModule } from 'src/app/shared/fontawesome/fontawesome.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from 'src/app/shared/material/material.module';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { FontawesomeModule } from 'src/app/shared/fontawesome/fontawesome.module
   imports: [
     CommonModule,
     FontawesomeModule,
+    HttpClientModule,
     LandingPageRoutingModule,
+    MaterialModule,
     NgxPageScrollCoreModule,
     ReactiveFormsModule
   ]
