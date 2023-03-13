@@ -6,28 +6,27 @@
     <div class="menu__links">
         <nav class="nav">
             <ul class="nav__ul">
-                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="/inicio#home" data-text="Inicio">Inicio</a>
+                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="/inicio#home" data-text="Inicio"
+                        title="Inicio">Inicio</a>
                 </li>
-                <li class="nav__li"><a class="nav__a" href="/inicio#about" (click)="menuToggle()"
-                        data-text="Sobre mi">Sobre
+                <li class="nav__li"><a class="nav__a" href="/inicio#about" (click)="menuToggle()" data-text="Sobre mi"
+                        title="Sobre-mí">Sobre
                         mi</a></li>
                 <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="/inicio#projects"
-                        data-text="Proyectos">Proyectos</a></li>
-                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="/inicio#contact"
-                        data-text="Contacto">Contacto</a></li>
+                        data-text="Proyectos" title="Proyectos">Proyectos</a></li>
+                <li class="nav__li"><a class="nav__a" (click)="menuToggle()" href="/inicio#contact" data-text="Contacto"
+                        title="Contacto">Contacto</a></li>
             </ul>
         </nav>
 
         <!--Social-links component-->
-        <div class="links__social">
+        <div class="links__social" (click)="menuToggle()">
             <app-social-links [svgClass]="svgClass"></app-social-links>
         </div>
 
     </div>
 </div>
 
-<button class="menuicon" (click)="menuToggle()" (mouseenter)="colorToogle()" (mouseleave)="colorToogle()">
-    <div [classList]="barOne"></div>
-    <div [classList]="barTwo"></div>
-    <div [classList]="barThree"></div>
+<button class="btn--menu" (click)="menuToggle()" (mouseenter)="colorToogle()" (mouseleave)="colorToogle()">
+    <fa-icon [icon]="active ? bars : cross" class="btn--menu__icon"></fa-icon>
 </button>

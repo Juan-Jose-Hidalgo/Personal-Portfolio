@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-menu',
@@ -7,14 +9,19 @@ import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
+  @HostListener('document:keydown.escape', ['$event'])
+  onEscapeKeyDown(event: KeyboardEvent) {
+    this.menuToggle();
+  }
+  menuIcon = faBars;
+  menuIconTransition = faBars;
   active = false;
   grayScale = false;
 
   //Classes
   menu = 'menu menu--active';
-  barOne = 'menuicon__bar';
-  barTwo = 'menuicon__bar';
-  barThree = 'menuicon__bar';
+  bars = faTimes;
+  cross = faBars;
   banner = 'menu__banner-img';
   svgClass = 'rrss__svg rrss__svg--blue';
 
@@ -28,18 +35,7 @@ export class MenuComponent {
    */
   menuToggle() {
     this.active = !this.active;
-
-    if (this.active) {
-      this.menu = 'menu';
-      this.barOne = 'menuicon__bar menuicon__bar--one';
-      this.barTwo = 'menuicon__bar menuicon__bar--two';
-      this.barThree = 'menuicon__bar menuicon__bar--three';
-    } else {
-      this.menu = 'menu menu--active';
-      this.barOne = 'menuicon__bar';
-      this.barTwo = 'menuicon__bar';
-      this.barThree = 'menuicon__bar';
-    }
+    this.menu = this.active ? 'menu' : 'menu menu--active';
   }
 
   /**

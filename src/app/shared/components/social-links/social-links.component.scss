@@ -20,3 +20,13 @@
 .rrss__svg--blue {
     color: map-get($map: var.$colors-map, $key: "primary");
 }
+
+.rrss__icon{
+    color: map-get($map: var.$colors-map, $key: "primary");
+    font-size: 3em;
+    transition: all .3s ease;
+
+    &:hover{
+        color: map-get($map: var.$colors-map, $key: "accent");
+    }
+}

@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
 import { RouterModule } from '@angular/router';
 import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
+import { FontawesomeModule } from 'src/app/shared/fontawesome/fontawesome.module';
 
 
 
@@ -19,6 +20,7 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
   ],
   imports: [
     CommonModule,
+    FontawesomeModule,
     RouterModule
   ],
   exports: [

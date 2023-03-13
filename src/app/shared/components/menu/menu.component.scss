@@ -117,54 +117,7 @@
     }
 }
 
-.menuicon {
-    position: fixed;
-    top: 1.25rem;
-    right: 1.25rem;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 0;
-    width: 4rem;
-    height: 4rem;
-    gap: 1.1rem;
-    z-index: 2;
-
-    &:hover {
-
-        .menuicon__bar--one,
-        .menuicon__bar--two,
-        .menuicon__bar--three {
-            background-color: map-get(var.$colors-map, "primary");
-        }
-    }
-}
-
-.menuicon__bar {
-    background-color: map-get(var.$colors-map, "black");
-    height: .25rem;
-    width: 100%;
-    border-radius: 5px;
-    transition: all .5s;
-    transform-origin: left;
-}
-
-.menuicon__bar--one,
-.menuicon__bar--two,
-.menuicon__bar--three {
-    background-color: map-get(var.$colors-map, "accent");
-}
-
-.menuicon__bar--one {
-    transform: rotate(45deg);
-}
-
-.menuicon__bar--two {
-    opacity: 0;
-}
-
-.menuicon__bar--three {
-    transform: rotate(-45deg);
+.btn--menu__icon {
+    color: map-get(var.$colors-map, "secondary");
+    font-size: 2em;
 }

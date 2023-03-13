@@ -71,3 +71,21 @@
         color: map-get($map: var.$colors-map, $key: "accent");
     }
 }
+
+//* MENU BUTTON
+.btn--menu {
+    @include mix.flex-box(column, nowrap, center, center);
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    cursor: pointer;
+    border: 0;
+    width: 4rem;
+    height: 4rem;
+    gap: 1.1rem;
+    z-index: 2;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: map-get($map: var.$colors-map, $key: "white");
+    box-shadow: 0 0.15rem 0.3rem rgba(0, 0, 0, 0.3), 0 0.05rem 0.1rem rgba(0, 0, 0, 0.1);
+}
