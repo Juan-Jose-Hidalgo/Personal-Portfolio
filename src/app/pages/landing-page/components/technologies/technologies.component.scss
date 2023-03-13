@@ -3,21 +3,18 @@
 
 .icons {
     @include mix.flex-box(row, wrap, center, center);
-    width: 100%;
     gap: 1rem;
 
-    @media (min-width: 922px) {
-        gap: 3rem;
+    @media (min-width: 992px) {
+        gap: 2rem;
     }
 }
 
 .icons__icon {
-    width: 2em;
-    color: map-get($map: var.$colors-map, $key: "secondary");
+    color: map-get($map: var.$colors-map, $key: "accent");
+    font-size: 2em;
 
     @media (min-width: 992px) {
-        width: 3em;
-        color: map-get($map: var.$colors-map, $key: "accent");
+        font-size: 3em;
     }
-
 }
