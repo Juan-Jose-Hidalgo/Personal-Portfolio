@@ -15,6 +15,7 @@
     @include mix.flex-box(row, nowrap, space-between, center);
     width: 90%;
     max-width: 1300px;
+    height: 43.75rem;
     margin: 0 auto;
     background-color: map-get($map: var.$colors-map, $key: "white2");
     border-radius: 5px;
@@ -24,96 +25,12 @@
     overflow: hidden;
 }
 
-::-webkit-input-placeholder {
-    /* WebKit browsers */
-    opacity: 0;
-}
-
-:-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    opacity: 0;
-}
-
-::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    opacity: 0;
-}
-
-:-ms-input-placeholder {
-    /* Internet Explorer 10+ */
-    opacity: 0;
-}
-
-.form {
+.contact__form {
     width: 100%;
-    font-size: 1em;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1.8rem;
 
     @media (min-width: 992px) {
         width: 50%;
     }
-}
-
-.form__title {
-    text-align: center;
-    color: map-get($map: var.$colors-map, $key: "white");
-}
-
-.form__group {
-    position: relative;
-    margin-bottom: 1.5rem;
-}
-
-.form__input {
-    display: block;
-    width: 100%;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    border: none;
-    border-radius: 0;
-    background-color: transparent;
-    color: map-get($map: var.$colors-map, $key: "white");
-    border-bottom: 2px solid #ddd;
-    transition: all 0.3s;
-
-    &:focus,
-    &:not(:placeholder-shown) {
-        outline: none;
-        border-bottom: 2px solid map-get($map: var.$colors-map, $key: "primary");
-    }
-
-    &:focus~.form__label,
-    &:not(:placeholder-shown)~.form__label {
-        top: -1.2em;
-        font-size: 0.8em;
-        color: map-get($map: var.$colors-map, $key: "accent");
-    }
-}
-
-.form__label {
-    position: absolute;
-    top: -0.2em;
-    font-size: 1em;
-    font-family: map-get($map: var.$fonts-map, $key: "secondary");
-    color: map-get($map: var.$colors-map, $key: "primary");
-    pointer-events: none;
-    transition: all 0.3s;
-}
-
-.form__error {
-    margin-top: .5rem;
-    visibility: hidden;
-    font-family: map-get($map: var.$fonts-map, $key: "secondary");
-    font-size: .8em;
-}
-
-.form__error--visible {
-    color: map-get($map: var.$colors-map, $key: "warn");
-    visibility: visible;
 }
 
 .contact__image {
@@ -122,5 +39,9 @@
     @media (min-width: 992px) {
         display: block;
         width: 50%;
+        height: 100%;
+        background-image: url('/assets/img/1672311169146.jpeg');
+        background-size: cover;
+        background-position: center center;
     }
 }

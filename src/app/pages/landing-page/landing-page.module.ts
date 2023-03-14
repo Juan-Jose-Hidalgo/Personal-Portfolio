@@ -15,6 +15,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { FontawesomeModule } from 'src/app/shared/fontawesome/fontawesome.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from 'src/app/shared/material/material.module';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MaterialModule } from 'src/app/shared/material/material.module';
     ProjectsComponent,
     TechnologiesComponent,
     SvgAnimatedComponent,
-    ProjectComponent
+    ProjectComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,
