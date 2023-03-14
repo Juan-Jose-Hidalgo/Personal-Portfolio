@@ -8,7 +8,7 @@
     background-position: top;
     background-color: map-get($map: var.$colors-map, $key: "black");
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .hero__content {
@@ -31,6 +31,10 @@
     @media (min-width: 922px) {
         width: 40%;
     }
+
+    @media screen and (orientation: landscape) and (max-width: 1000px) {
+        width: 30%;
+    }
 }
 
 .hero__info {
@@ -46,4 +50,14 @@
 .hero__h2 {
     color: map-get($map: var.$colors-map, $key: "white");
     padding: 0;
+
+    @media screen and (orientation: landscape) and (max-width: 1000px) {
+        font-size: 1.8em;
+    }
+}
+
+.hero__h1{
+    @media screen and (orientation: landscape) and (max-width: 1000px) {
+        font-size: 2.2em;
+    }
 }
