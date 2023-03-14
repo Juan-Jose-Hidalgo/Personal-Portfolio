@@ -44,6 +44,10 @@
     }
 }
 
-.about__link {
-    color: map-get($map: var.$colors-map, $key: "accent");
+.about__p {
+    line-height: 1.5;
+
+    @media (min-width: 992px) {
+        font-size: 1.3em;
+    }
 }
