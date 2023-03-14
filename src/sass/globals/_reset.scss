@@ -163,6 +163,26 @@ label {
     outline: none;
 }
 
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    opacity: 0;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    opacity: 0;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    opacity: 0;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    opacity: 0;
+}
+
 //* Reset tables
 table,
 tr,
